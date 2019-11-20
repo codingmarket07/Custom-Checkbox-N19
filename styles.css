@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background: #574b90;
+}
+
+.wrapper{
+  max-width: 350px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.container .title{
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.container ul li{
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.container ul li .wrap{
+  margin-right: 10px;
+  max-width: 25px;
+  width: 100%;
+  height: 25px;
+  display: block;
+  border: 2px solid #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+.container ul li .wrap .input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.container ul li .wrap .checkmark{
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 23px;
+  height: 23px;
+  background: #fff;
+  display: none;
+}
+
+.container ul li .wrap .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 4px;
+  border: 2px solid;
+  border-color: transparent transparent #574b90 #574b90;
+  transform: rotate(-45deg)
+}
+
+.container ul li .wrap .input:checked ~ .checkmark{
+  display: block;
+}
